@@ -1,29 +1,43 @@
 import { NgModule, ApplicationRef } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
+import { routing } from './app.routing';
+
 
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { HeaderComponent } from './header/header.component';
+import { HeaderComponent } from './shared/header.component';
+import {ProtectedComponent} from "./protected/protected.component";
+import {SigninComponent} from "./unprotected/signin.component";
+import {SignupComponent} from "./unprotected/signup.component";
+
+
 import { ApiService } from './shared';
-// import { routing } from './app.routing';
+import {AuthService} from "./shared/auth.service";
 
 import { removeNgStyles, createNewHosts } from '@angularclass/hmr';
+import {AuthGuard} from "./shared/auth.guard";
+
 
 @NgModule({
   imports: [
     BrowserModule,
     HttpModule,
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
+    routing
   ],
   declarations: [
     AppComponent,
-    HomeComponent,
-    HeaderComponent
+    HeaderComponent,
+    ProtectedComponent,
+    SigninComponent,
+    SignupComponent
   ],
   providers: [
-    ApiService
+    ApiService,
+    AuthService,
+    AuthGuard
   ],
   bootstrap: [AppComponent]
 })

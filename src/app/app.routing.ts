@@ -1,11 +1,15 @@
 import { RouterModule, Routes } from '@angular/router';
+import {ProtectedComponent} from "./protected/protected.component";
+import {SigninComponent} from "./unprotected/signin.component";
+import {SignupComponent} from "./unprotected/signup.component";
+import {AuthGuard} from "./shared/auth.guard";
 
-import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './header/header.component';
 
-// const routes: Routes = [
-//   { path: '', component: HomeComponent },
-//   { path: 'header', component: AboutComponent}
-// ];
+const routes: Routes = [
+    { path: '', redirectTo: 'signup', pathMatch: 'full' },
+    { path: 'signup', component: SignupComponent},
+    { path: 'signin', component: SigninComponent},
+    { path: 'protected', component: ProtectedComponent,canActivate: [AuthGuard]},
+];
 
-// export const routing = RouterModule.forRoot(routes);
+export const routing = RouterModule.forRoot(routes);

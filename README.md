@@ -1,10 +1,5 @@
+*** I'm using angular 2 with webpack bundle from: https://github.com/preboot/angular2-webpack.git so I stored their description with some changes
 # angular2-webpack
-
-[![Dependency Status](https://david-dm.org/preboot/angular2-webpack/status.svg)](https://david-dm.org/preboot/angular2-webpack#info=dependencies) [![devDependency Status](https://david-dm.org/preboot/angular2-webpack/dev-status.svg)](https://david-dm.org/preboot/angular2-webpack#info=devDependencies)
-[![Join the chat at https://gitter.im/preboot/angular2-webpack](https://badges.gitter.im/preboot/angular2-webpack.svg)](https://gitter.im/preboot/angular2-webpack?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
-
-**Note: This guide is following the Angular's [Style Guide](http://angular.io/styleguide) so I will be changing conventions here and there eventually. You are free to use your own conventions with this starter.**
-**Note 2: There is no conventions yet for RC5 on the style guide so there will be a future update here for that.**
 
 A complete, yet simple, starter for Angular 2 using Webpack.
 
@@ -20,15 +15,13 @@ This seed repo serves as an Angular 2 starter for anyone looking to get up and r
 
 >Warning: Make sure you're using the latest version of Node.js and NPM
 
-[Is Angular 2 Ready Yet?](http://splintercode.github.io/is-angular-2-ready/)
-
 ### Quick start
 
 > Clone/Download the repo then edit `app.ts` inside [`/src/app/app.component.ts`](/src/app/app.component.ts)
 
 ```bash
 # clone our repo
-$ git clone https://github.com/preboot/angular2-webpack.git my-app
+$ git clone https://github.com/Evil2l/ng-auth.git my-app
 
 # change directory to your app
 $ cd my-app
@@ -41,18 +34,6 @@ $ npm start
 ```
 go to [http://localhost:8080](http://localhost:8080) in your browser.
 
-# Table of Contents
-
-* [Getting Started](#getting-started)
-    * [Dependencies](#dependencies)
-    * [Installing](#installing)
-    * [Developing](#developing)
-    * [Testing](#testing)
-    * [Production](#production)
-    * [Documentation](#documentation)
-* [Frequently asked questions](#faq)
-* [TypeScript](#typescript)
-* [License](#license)
 
 # Getting Started
 
